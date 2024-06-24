@@ -74,6 +74,18 @@
 				"url": "http://localhost:3000/users/"
 			},
 			"response": []
+		},
+		{
+			"name": "Get user by id 500ms",
+			"id": "87a932c6-bb6b-49a2-addf-7122f3419a23",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
