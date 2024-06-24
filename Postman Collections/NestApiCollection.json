@@ -29,7 +29,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"abc\",\n      \"username\": \"abc\",\n      \"email\": \"abc@uixlabs.in\",\n      \"password\": \"abc\"\n}",
+					"raw": "{\n    \"name\": \"abcd3\",\n      \"username\": \"abcd3\",\n      \"email\": \"abcd3@uixlabs.in\",\n      \"password\": \"abc1\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,6 +69,9 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [],
 				"url": "http://localhost:3000/users/"
