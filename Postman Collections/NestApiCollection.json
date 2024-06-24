@@ -47,18 +47,18 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"username\": \"kiranjeetuix\",\n      \"password\": \"kiranjeet123\"\n}",
+					"raw": "{\n      \"username\": \"abc\",\n      \"password\": \"abc\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:3000/users/"
+				"url": "http://localhost:3000/users/sign-in"
 			},
 			"response": []
 		},
