@@ -29,7 +29,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Kiranjeet Kaur\",\n      \"username\": \"kiranjeetuix\",\n      \"email\": \"kiranjeet@uixlabs.in\",\n      \"password\": \"kiranjeet123\"\n}",
+					"raw": "{\n    \"name\": \"abc\",\n      \"username\": \"abc\",\n      \"email\": \"abc@uixlabs.in\",\n      \"password\": \"abc\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
