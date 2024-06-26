@@ -27,7 +27,7 @@ export class UsersController {
     const { name, username, email, password } = createUserDto;
     return this.usersService.createUser(name, username, email, password);
   }
-  @Get()
+  @Post('sign-in')
   async signIn(
     @Body() createDto: { username: string; password: string },
   ): Promise<User> {
@@ -37,12 +37,14 @@ export class UsersController {
   }
   @Get()
   async getUsers(): Promise<User[]> {
-    return this.usersService.getUsers();
+    return await this.usersService.getUsers();
   }
 
   // @Get(':id')
-  // async getUserById(@Param('id') id: string): Promise<User | null> {
-  //   return this.usersService.getUserById(Number(id));
+  // async getUserById(
+  //   @Param('id', ParseIntPipe) id: number,
+  // ): Promise<User | null> {
+  //   return this.usersService.getUserById(id);
   // }
   // @Put(':id')
   // async updateUser(

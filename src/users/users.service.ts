@@ -1,6 +1,7 @@
 import {
   ConflictException,
   Injectable,
+  Post,
   UnauthorizedException,
 } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service'; // Ensure correct path to PrismaService
@@ -11,6 +12,7 @@ import * as bcrypt from 'bcrypt';
 export class UsersService {
   constructor(private prisma: PrismaService) {}
 
+  @Post()
   async createUser(
     name: string,
     username: string,
@@ -18,6 +20,8 @@ export class UsersService {
     password: string,
   ): Promise<User> {
     const hashedPassword = await bcrypt.hash(password, 10);
+    // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    // await sleep(5);
     try {
       return await this.prisma.prismaClient.user.create({
         data: {
@@ -52,10 +56,13 @@ export class UsersService {
   }
 
   async getUsers(): Promise<User[]> {
+    // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    // sleep(500000);
     return this.prisma.prismaClient.user.findMany();
   }
 
   // async getUserById(id: number): Promise<User | null> {
+  //   // await new Promise((resolve) => setTimeout(resolve, 500));
   //   return this.prisma.prismaClient.user.findUnique({
   //     where: { id },
   //   });

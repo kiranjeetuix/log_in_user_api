@@ -1,8 +1,7 @@
 'use strict';
-import './.env';
 exports.config = {
   app_name: ['login_repo'],
-  license_key: 'e76e959da52608fb3b5a00f7a4cfbff2FFFFNRAL',
+  license_key: 'e61173f24ef59d802cbb15beff0de311FFFFNRAL',
   logging: {
     level: 'info',
   },
