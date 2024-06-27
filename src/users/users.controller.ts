@@ -27,14 +27,14 @@ export class UsersController {
     const { name, username, email, password } = createUserDto;
     return this.usersService.createUser(name, username, email, password);
   }
-  @Post('sign-in')
-  async signIn(
-    @Body() createDto: { username: string; password: string },
-  ): Promise<User> {
-    const { username, password } = createDto;
+  // @Post('sign-in')
+  // async signIn(
+  //   @Body() createDto: { username: string; password: string },
+  // ): Promise<User> {
+  //   const { username, password } = createDto;
 
-    return this.usersService.signIn(username, password);
-  }
+  //   return this.usersService.signIn(username, password);
+  // }
   @Get()
   async getUsers(): Promise<User[]> {
     return await this.usersService.getUsers();

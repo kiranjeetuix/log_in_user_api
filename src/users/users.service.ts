@@ -1,9 +1,4 @@
-import {
-  ConflictException,
-  Injectable,
-  Post,
-  UnauthorizedException,
-} from '@nestjs/common';
+import { ConflictException, Injectable, Post } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service'; // Ensure correct path to PrismaService
 import { User } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
@@ -39,21 +34,21 @@ export class UsersService {
     }
   }
 
-  async signIn(username: string, password: string): Promise<User> {
-    const user = this.prisma.prismaClient.user.findUnique({
-      where: {
-        username,
-      },
-    });
-    if (!user) {
-      throw new UnauthorizedException('User not found');
-    }
-    const passwordValid = await bcrypt.compare(password, (await user).password);
-    if (!passwordValid) {
-      throw new UnauthorizedException('Invalid password');
-    }
-    return user;
-  }
+  // async signIn(username: string, password: string): Promise<User> {
+  //   const user = this.prisma.prismaClient.user.findUnique({
+  //     where: {
+  //       username,
+  //     },
+  //   });
+  //   if (!user) {
+  //     throw new UnauthorizedException('User not found');
+  //   }
+  //   const passwordValid = await bcrypt.compare(password, (await user).password);
+  //   if (!passwordValid) {
+  //     throw new UnauthorizedException('Invalid password');
+  //   }
+  //   return user;
+  // }
 
   async getUsers(): Promise<User[]> {
     // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
