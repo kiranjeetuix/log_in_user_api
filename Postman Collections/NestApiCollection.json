@@ -51,14 +51,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"username\": \"abc\",\n      \"password\": \"abc\"\n}",
+					"raw": "{\n      \"username\": \"vidhu\",\n      \"password\": \"vidhu\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:3000/users/sign-in"
+				"url": "http://localhost:3000/auth/login"
 			},
 			"response": []
 		},
