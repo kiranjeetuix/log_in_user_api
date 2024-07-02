@@ -14,7 +14,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:3000/"
+				"url": "http://13.201.47.145:3000"
 			},
 			"response": []
 		},
@@ -29,14 +29,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"abcd3\",\n      \"username\": \"abcd5\",\n      \"email\": \"abcd5@uixlabs.in\",\n      \"password\": \"abc1\"\n}",
+					"raw": "{\n    \"name\": \"vidhushiuii\",\n      \"username\": \"vidhushiuii\",\n      \"email\": \"vidhushiuii@uixlabs.in\",\n      \"password\": \"1234577899\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:3000/users/"
+				"url": "http://13.201.47.145:3000/users/"
 			},
 			"response": []
 		},
@@ -70,11 +70,14 @@
 			},
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZGh1Iiwic3ViIjozMCwiaWF0IjoxNzE5NDc2NDI3LCJleHAiOjE3MTk0ODAwMjd9.5LrlK85LOJoZc88EldKeE54_z5_veJTv-90ConZP-04"
+					}
 				},
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:3000/users/"
+				"url": "http://13.127.129.94:3000/users/"
 			},
 			"response": []
 		},
@@ -118,7 +121,8 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:3000/auth"
 			},
 			"response": []
 		}
